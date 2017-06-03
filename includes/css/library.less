@@ -1,0 +1,159 @@
+@color1: #00CCFF;
+@color2: #00D8CC;
+@color3: #FF1769;
+@color4: #FF3300;
+@color5: #BAD80A;
+
+//-------------------General functions-------------------
+.layout_center () {
+  margin: 0 auto;
+}
+
+.border_radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.wrap () {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+.box_shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+
+.box_transition (@scope: all, @time: 0.3s, @effect: ease-out) {
+  -webkit-transition: @arguments; /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: @arguments; /* Firefox 4-15 */
+  -o-transition: @arguments; /* Opera 10.50–12.00 */
+  transition: @arguments; /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.box_gradient (@color1: #999999, @color2: #444444) {
+  background-color: @color1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@color1), to(@color2)); /* Chrome, Safari 4+ */
+  background-image: -webkit-linear-gradient(top, @color1, @color2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image: -moz-linear-gradient(top, @color1, @color2); /* Firefox 3.6-15 */
+  background-image: -o-linear-gradient(top, @color1, @color2); /* Opera 11.10-12.00 */
+  background-image: linear-gradient(to bottom, @color1, @color2); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+//-------------------3D buttons-------------------
+.button_3D (@fontSize: 14px, @width: 160px, @margin: auto, @padding: 4px) {
+  @color1: rgba(219, 31, 5, 1);
+  @color2: rgba(0, 0, 0, .7);
+  @color3: rgba(0, 0, 0, .9);
+  .border_radius (@radius: 8px);
+  .box_transition(all 0.1s ease);
+  text-align: center;
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-color: rgba(219, 87, 5, 1);
+  display: block;
+  -webkit-box-shadow: 0px 9px 0px @color1, 0px 9px 25px @color2;
+  box-shadow: 0px 9px 0px @color1, 0px 9px 25px @color2;
+  font-size: @fontSize;
+  margin: @margin;
+  width: @width;
+  padding: @padding;
+  &:active {
+    -webkit-box-shadow: 0px 3px 0px @color1, 0px 3px 6px @color3;
+    box-shadow: 0px 3px 0px @color1, 0px 3px 6px @color3;
+    position: relative;
+    top: 6px;
+  }
+}
+
+//-------------------Reused for HTML files-------------------
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//Common usage
+.SS_hidden {
+  display: none;
+}
+
+.SS_invisible {
+  visibility: hidden;
+}
+
+.SS_left {
+  float: left;
+}
+
+.SS_right {
+  float: right;
+}
+
+.SS_info_error {
+  .border_radius(4px);
+  .box_shadow(0, 2px, 5px, rgba(0, 0, 0, .15));
+  background-color: #F2DEDE;
+  color: #B94A48;
+  border: 1px solid #EED3D7;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.SS_info_info {
+  .border_radius(4px);
+  .box_shadow(0, 2px, 5px, rgba(0, 0, 0, .15));
+  background-color: #d9edf7;
+  color: #3a87ad;
+  border: 1px solid #bce8f1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.SS_info_success {
+  .border_radius(4px);
+  .box_shadow(0, 2px, 5px, rgba(0, 0, 0, .15));
+  background-color: #dff0d8;
+  color: #468847;
+  border: 1px solid #d6e9c6;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.SS_info_warning {
+  .border_radius(4px);
+  .box_shadow(0, 2px, 5px, rgba(0, 0, 0, .15));
+  background-color: #fcf8e3;
+  color: #c09853;
+  border: 1px solid #fbeed5;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.SS_bold {
+  font-weight: bold;
+}
+
+.SS_bg_design {
+  .box_shadow(0, 0, 4px, #CCCCCC);
+  background: url('../../includes/images/clean.png') repeat;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+
+.SS_mini_gray {
+  color: #B6B6B6;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.SS_clear {
+  clear: both;
+}
+
+.SS_block_design {
+  .box_shadow(0, 0, 4px, #CCCCCC);
+  .border_radius(.5em);
+  word-wrap: break-word;
+  background: url('../../includes/images/clean.png') repeat;
+  border: 1px solid #CCC;
+  padding: 5px 15px 15px;
+}

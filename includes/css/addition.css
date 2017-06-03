@@ -1,0 +1,19 @@
+/*-------------------Animation for logo-------------------*/
+@keyframes logoImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@-webkit-keyframes logoImage /* Safari and Chrome */
+{
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(720deg);
+    }
+}

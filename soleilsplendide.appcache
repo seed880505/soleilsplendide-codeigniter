@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 2013-05-25 v1.0.0
+
+/includes/css/normalize.css
+/includes/css/jquery-ui/dot-luv/jquery-ui.min.css
+/includes/datatables/media/css/jquery.dataTables_themeroller.css
+
+/includes/javascripts/jquery/jquery.min.js
+/includes/javascripts/jquery/jquery-ui.min.js
+/includes/colorbox/jquery.colorbox-min.js
+/includes/datatables/media/js/jquery.dataTables.min.js
+
+/uploads/index/index1.png
+/uploads/index/index3.png
